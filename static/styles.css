@@ -1,0 +1,327 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilos do Header */
+  .reader-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    background-color: #1b1b1b;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    color: #fff;
+  }
+
+  main{
+    margin-top: 70px;
+    background-color: #FAFAFA;
+    max-height: 250px;
+    min-height: 200px;
+    padding: 30px 100px 30px 100px;
+    width: 100%;
+  }
+
+
+  .titulo-api{
+    display: flex;
+  }
+  .title{
+    color: #3b4151;
+    font-size: 2.5em;
+  }
+
+  span{
+    background-color: rgb(31, 180, 31);
+    max-height: 25px;
+    width: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 3px;
+    margin: 5px;
+    color: #fff
+  }
+  span:first-of-type{
+    background-color: #3b4151;
+  }
+
+  .content-text{
+    margin-top: 10px;
+  }
+
+  .schema-fake{
+    width: 100%;
+    padding: 30px 200px 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+
+.form-compose {
+    max-width: 300px; /* Ajusta a largura máxima do formulário */
+    width: 100px;
+}
+
+label{
+    display: block; /* Faz com que a label ocupe toda a largura disponível */
+    margin-bottom: 5px; /* Adiciona um espaço abaixo da label */
+    font-size: 16px; /* Ajusta o tamanho da fonte da label */
+    font-weight: bold;
+}
+
+select {
+    width: 100%;/* Faz com que a caixa de opções ocupe toda a largura disponível */
+    height: 30px; /* Define uma altura específica para criar uma forma quadrada */
+    padding: 5px; /* Adiciona um pouco de preenchimento interno */
+    border: 2px solid #303030; /* Define a cor da borda */
+    border-radius: 2px; /* Adiciona bordas arredondadas (opcional) */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+    background-color: #f9f9f9; /* Define a cor de fundo */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo da largura */
+}
+.message-autorized{
+    display: flex;
+    height: 30px;
+    max-width: 300px; /* Ajusta a largura máxima do formulário */
+    width: 150px;
+    border: 2px solid #4CAF50;
+    margin-top: 23px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px 0 5px;
+}
+.icon {
+    color: #4CAF50;
+}
+.text-bold{
+    color: #4CAF50;
+    font-weight: bold;
+}
+.conteiner-requests-api{
+    width: 100%;
+    padding: 20px 200px 20px 100px;
+    background-color: #FAFAFA;
+    border-top: 2px solid #d7d7d7;
+}
+.contant-box-requests{
+    width: 100%;
+    display: flex;
+    padding: 10px 0 20px 0;
+    border-bottom: 1px solid #d7d7d7;
+}
+.contant-box-requests p{
+    margin-left: 10px;
+}
+.margin{
+    font-size: 20px;
+}
+
+.transcribe-request{
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background-color: #d2e8db;
+    justify-content: space-between;
+    border: 1px solid #218554;
+    border-radius: 5px;
+    padding: 10px;
+}
+.request-content-port{
+    display: flex;
+}
+
+.green-text{
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color:#4CAF50 ;
+    height: 30px;
+    border: 1px solid #218554;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+.path-request{
+    padding: 5px 10px;
+    font-weight: bold;
+    color:  #218554;
+}
+.btn-content-open{
+    background: none; /* Remove o fundo do botão */
+    border: none; /* Remove a borda do botão */
+    color: #218554; /* Define a cor do texto */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    cursor: pointer; /* Faz o cursor parecer um ponteiro */
+    padding: 0; /* Remove o preenchimento padrão */
+    text-align: left;
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%; 
+    border: 1px solid #218554;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+.parans-text{
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #d7d7d7;
+}
+.content-parans{
+    width: 100%;
+    background-color:#d2e8db;
+}
+
+
+.parameter label {
+    padding: 20px 0 5px 20px;
+    display: block;
+    margin-bottom: 8px;
+}
+.parameter input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.parameter input[type="file"] {
+    padding-left: 20px;
+}
+
+.try-it-out {
+    margin: 20px 0 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.content-parans h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.content-parans pre {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 20px;
+}
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .header-title {
+      font-size: 20px;
+    }
+  
+    .header-logo {
+      width: 50px;
+      height: 50px;
+    }
+    main{
+        margin-top: 70px;
+        padding: 10px 20px 20px 20px;
+        width: 100%;
+        min-height: 150px;
+      }
+      .schema-fake{
+        width: 100%;
+        padding: 20px 20px 30px 20px;
+      }
+
+      label, select{
+        font-size: 11px;
+      }
+      .title{
+        font-size: 1.4em;
+      }
+      span{
+        font-size: 10px;
+        padding: 3px;
+        margin: 5px;
+      }
+      p{
+        font-size: 13px;
+      }
+      .message-autorized{
+        margin-top: 17px;
+    }
+    .conteiner-requests-api{
+        padding: 10px 20px 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-title {
+      font-size: 18px;
+    }
+  
+    .header-logo {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .reader-header {
+      padding: 0 10px;
+    }
+
+    
+  }
+  
+
+
+
+  /* Teste */
+
+
+
+

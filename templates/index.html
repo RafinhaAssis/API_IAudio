@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API - IAUDIO</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+  <link rel="icon" href="{{url_for('static', filename='sol.png')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="reader-header">
+    <div class="header-content">
+      <img src="{{url_for('static', filename='sol.png')}}" alt="Logo" class="header-logo">
+      <h1 class="header-title">IAudio - API</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="titulo-api">
+        <h1 class="title">Api Transcription</h1>
+        <span>0.0.1</span>
+        <span>Fiap</span>
+    </div>
+    <p>[ Base URL: ip da maquina/v1]</p>
+    <p class="content-text">
+        Este é uma versão beta do serviço de transcrição.
+         Você pode descobrir mais sobre o projeto em http://swagger.io ou no irc.freenode.net. 
+        Para este versão apenas alguns end-point estão liberados, utilize-os para testar a aplicação.
+    </p>
+  </main>
+  <section class="schema-fake">
+    <form class="form-compose">
+        <label for="opcoes">Schemes</label>
+        <select id="opcoes" name="opcoes">
+            <option value="opcao1">HTTP</option>
+        </select>
+    </form>
+
+    <div class="message-autorized">
+        <p class="text-bold">Autorizado</p>
+        <i class="fa-solid fa-lock-open icon"></i>
+    </div>
+  </section>
+
+  <section class="conteiner-requests-api">
+    <div class="contant-box-requests">
+        <h2 class="title margin">Transcrição</h2>
+    </div>
+    <div class="requests">
+        <div class="transcribe-request">
+            <div class="request-content-port">
+                <div class="green-text">POST</div>
+                <p class="path-request">/transcribe/uploadAudio</p>
+            </div>
+            <div class="end-content">
+                <i class="fa-solid fa-lock-open icon"></i>
+                <button id="dropdownButton" class="btn-content-open">▼</button>
+            </div>
+            
+        </div>
+        <div class="dropdown">
+            <div class="dropdown-content" id="dropdownContent">
+                <div class="parans-text">
+                    <p>Parametros</p>
+                </div>
+                <div class="content-parans">
+                        <form action="/upload" method="post" enctype="multipart/form-data" class="parameter">
+                            <label for="file">Arquivo</label>
+                            <input type="file" id="file" name="file" accept="audio/*" required>
+                            <button class="try-it-out" type="submit">Testar</button>
+                        </form>
+                </div>
+                <div class="parans-text">
+                    <p>Resposta</p>
+                </div>
+                <div class="content-parans">
+                    <h1>Responses</h1>
+                    <pre>
+                    {{ content }}
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <script>
+    // Função para abrir e fechar o dropdown
+    document.getElementById('dropdownButton').addEventListener('click', function() {
+        var dropdown = document.querySelector('.dropdown');
+        dropdown.classList.toggle('show');
+    });
+
+</script>
+</body>
+</html>
